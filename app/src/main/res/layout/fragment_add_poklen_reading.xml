@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.AddPoklenReadingFragment">
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:text="Submit"
+        android:textColor="@color/colorWhite" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnSubmit"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:padding="7dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:text="Poklen"
+                android:textColor="@color/colorPrimary" />
+
+            <Spinner
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:id="@+id/spPoklen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/edFromDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_date"
+                    android:drawablePadding="10dp"
+                    android:editable="false"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:hint="Start Date"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:padding="13dp"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvFromDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/edToDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_date"
+                    android:drawablePadding="10dp"
+                    android:editable="false"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:hint="To Date"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:padding="13dp"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvToDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:text="Poklen Type"
+                android:textColor="@color/colorPrimary" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:padding="10dp"
+                    android:id="@+id/rbBreaking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="Breaking" />
+
+                <RadioButton
+                    android:id="@+id/rbLoading"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="Loading" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:text="Shift Type"
+                android:textColor="@color/colorPrimary" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbDay"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="Day" />
+
+                <RadioButton
+                    android:id="@+id/rbNight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="Night" />
+
+            </RadioGroup>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/edStartKM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:hint="Start KM"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:padding="13dp"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/edEndKM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:hint="End KM"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:padding="13dp"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/edStartTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_time"
+                    android:drawablePadding="10dp"
+                    android:editable="false"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:hint="Start Time"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:padding="13dp"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/edEndTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_time"
+                    android:drawablePadding="10dp"
+                    android:editable="false"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:hint="End Time"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:padding="13dp"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
